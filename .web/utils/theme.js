@@ -1,0 +1,1 @@
+export default {"styles": {"global": {":root": {}, "body": {"fontFamily": "Raleway", "color": "#000000", "backgound": "#00B5FD"}}}}
