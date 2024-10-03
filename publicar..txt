@@ -1,0 +1,6 @@
+git add .
+
+git commit -m "cambios del 01-10-2024"
+
+
+git push origin master
