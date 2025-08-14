@@ -33,25 +33,6 @@
    ESTILOS GENERALES
 ==================== */
 
-/* ===== Carrusel - Pantallas pequeñas (celular) ===== */
-/* --- ESTILOS PARA EL CARRUSEL (DESKTOP Y MÓVIL) --- */
-
-/* 1. Contenedor de la diapositiva (Desktop) */
-.carousel-item {
-  height: 90vh; /* La diapositiva ocupará el 90% de la altura de la pantalla */
-  min-height: 650px; /* Altura mínima para pantallas grandes */
-  background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
-}
-
-/* 2. La imagen (Desktop y Móvil) */
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  /* CAMBIO CLAVE: La imagen ahora cubre todo el espacio sin deformarse */
-  object-fit: cover; 
-  /* Puedes ajustar esta posición para centrar la parte más importante de tu foto */
-  object-position: center center; 
-}
 
 /* 3. Ajustes para pantallas de celular */
 @media (max-width: 768px) {
@@ -187,13 +168,7 @@
 /* ===================
    TOPBAR ESTILO LIMPIO
 ==================== */
-.topbar {
-  background-color: #a9bffd;
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 0.4rem 0;
-  font-family: 'Raleway', sans-serif;
-}
+
 
 .topbar a,
 .topbar small,
@@ -361,7 +336,18 @@
 
             <!-- ========= IMAGEN 1 (Texto a la Izquierda) ========= -->
             <div class="carousel-item active">
-                <img class="w-100" src="img/carousel-1.jpeg" alt="Event projector setup with lighting">
+
+                <picture>
+              <!-- Móvil -->
+              <source media="(max-width: 576px)" srcset="img/carousel-1 -cel.jpeg">
+              <!-- Tablet -->
+              <source media="(max-width: 992px)" srcset="img/carousel-1.jpeg">
+              <!-- Desktop (fallback) -->
+              <img class="d-block w-100"
+                  src="img/carousel-1.jpeg"
+              alt="Event projector setup with lighting">
+              </picture>
+                <!--img class="w-100" src="img/carousel-1.jpeg" alt="Event projector setup with lighting">-->
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
