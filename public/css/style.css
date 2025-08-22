@@ -123,6 +123,7 @@
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: var(--bs-primary);
+    text-decoration: underline;
 }
 
 .navbar .dropdown-toggle::after {
@@ -138,11 +139,22 @@
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
+        display: block;
+        color: #000; /* asegúrate de que sea visible sobre fondo claro */
     }
 
     .navbar .navbar-nav {
         margin-top: 15px;
         border-top: 1px solid #EEEEEE;
+    }
+
+    .navbar-collapse {
+        background-color: #dee4f1; /* fondo claro para menú colapsado */
+        padding: 1rem;
+    }
+
+    .navbar-collapse.collapse.show {
+        display: block !important; /* fuerza visibilidad en móviles */
     }
 }
 
@@ -157,7 +169,6 @@
     .header-carousel .carousel-caption {
         margin-bottom: 0; /* Ajusta esto según necesites */
     }
-
 
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -176,6 +187,17 @@
         opacity: 1;
     }
 }
+
+.navbar-toggler {
+    border-color: #fff;
+    z-index: 9999; /* asegura visibilidad del botón */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
 
 
 /*** Header ***/

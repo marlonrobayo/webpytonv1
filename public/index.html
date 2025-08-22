@@ -24,7 +24,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet"/>
 <!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet"/>
-  ...
+ 
   
 
 
@@ -34,63 +34,42 @@
 ==================== */
 
 
-/* 3. Ajustes para pantallas de celular */
-@media (max-width: 768px) {
-  .carousel-item {
-    height: 80vh; /* Hacemos la diapositiva un poco más alta en móviles */
-    min-height: 500px;
-  }
+
+
+
+
+.carousel-caption h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white !important;
+  text-shadow: 2px 2px 4px rgb(44, 43, 43); /* sombra para que no se pierda en el fondo */
 }
 
+
+.carousel-caption p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 3px rgb(78, 75, 75);
+}
+
+/* En móvil lo hacemos más compacto */
+@media (max-width: 576px) {
   .carousel-caption {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    padding: 1.2rem 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    text-align: center;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    padding: 1rem;
   }
 
   .carousel-caption h1 {
-    font-size: 1.3rem;
-    font-family: 'Playfair Display', serif;
-    color: #fff;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
-    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
   }
 
   .carousel-caption p {
-    font-size: 0.95rem;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    margin: 0 auto;
-    max-width: 90%;
+    font-size: 1rem;
   }
+}
 
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 35px;
-    height: 35px;
-    top: auto;
-    bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-  }
 
-  .carousel-control-prev {
-    left: 10px;
-  }
-
-  .carousel-control-next {
-    right: 10px;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-size: 70% 70%;
-  }
 
   .testimonial .display-6 {
     font-size: 1.4rem;
@@ -116,215 +95,105 @@
   .footer a {
     font-size: 0.95rem;
   }
-}
-
-/* ===== Carrusel - Pantallas grandes (computador) ===== */
-@media (min-width: 769px) {
-  .carousel-item {
-    height: 100vh;
-    background-color: #fff;
-  }
-
-  .carousel-item img {
-    object-fit: contain;
-    object-position: center center;
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-  }
-
-  .carousel-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.2rem 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
-    text-align: center;
-    z-index: 2;
-  }
-
-  .carousel-caption h1 {
-    font-size: 1.4rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    color: #fff;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-    margin-bottom: 0.8rem;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .carousel-caption p {
-    font-size: 1rem;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-}
-
-/* ===================
-   TOPBAR ESTILO LIMPIO
-==================== */
-
-
-.topbar a,
-.topbar small,
-.topbar i {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.topbar a:hover {
-  color: #f0f0f0;
-  text-decoration: underline;
-}
-
-.topbar .container {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-/* RESPONSIVE TOPBAR */
-.topbar-desktop {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .topbar-desktop {
-    display: flex;
-  }
-
-  .topbar-mobile {
-    display: none;
-  }
-}
-
-.topbar-mobile {
-  background-color: #a9bffd;
-  color: #fff;
-  text-align: center;
-  padding: 0.6rem 1rem;
-  font-size: 0.9rem;
-}
-
-.topbar-mobile i {
-  margin-right: 6px;
-}
-
-/* ===================
-   NAVBAR ESTILO LIMPIO
-==================== */
-.bg-navbar {
-  background-color: #0d2d6c;
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: #ffc107;
-  text-decoration: underline;
-}
-
-.navbar-toggler {
-  border-color: #fff;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* Botones redondos para redes sociales */
-.btn-sm-square {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 
-  }
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
-<!-- Spinner Start -->
-<div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
-<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+  <!-- Spinner Start -->
+ <div id="spinner"
+  class="show bg-white position-fixed translate-middle w-00 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+  <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
 </div>
 <!-- Spinner End -->
 
 
-<!-- Topbar Mobile -->
-<div class="topbar topbar-mobile d-lg-none">
-  <div>
-    <i class="fa fa-truck"></i> Free Delivery | <i class="fa fa-phone-alt"></i> +1 (305) 386-7696
+<!-- Topbar Start -->
+<div class="container-fluid py-3 pt-0 d-none d-lg-flex bg-white text-secundary">
+  <div class="container">
+      <div class="d-flex justify-content-between">
+          <div>
+              <small class="me-3"><i class="fa fa-truck"></i>Free Delivery Free Set up</small>
+              <small class="me-3"><i class="fa fa-phone-alt me-2"></i>+1 (305) 386-7696</small>
+          </div>
+          <nav class="breadcrumb mb-0 text-white" >
+              <a class="breadcrumb-item small text-body" href="#">ACD Projector Rentals Miami</a>
+              <a href="final_blog_projector_rental.html" class="nav-item nav-link">Blog</a>
+
+              
+          </nav>
+      </div>
   </div>
 </div>
-
 <!-- Topbar End -->
 
-<!-- Topbar End -->
+
 <!-- Brand Start -->
 <div class="container-fluid bg-white text-white pt-1 pb-3 d-none d-lg-flex">
+
 </div>
 <!-- Brand End -->
+
+
+
 <!-- Navbar Start -->
-<!-- ✅ BARRA SUPERIOR + NAVBAR en uno -->
-<div class="container-fluid sticky-top bg-navbar text-white">
-  <!-- Topbar -->
-  <div class="container d-flex justify-content-between align-items-center py-2 small">
-    <div>
-      <i class="fa fa-truck me-2"></i> Free Delivery Free Set up
-      <span class="mx-3">|</span>
-      <i class="fa fa-phone-alt me-2"></i> +1 (305) 386-7696
-    </div>
-    <div class="d-none d-md-flex">
-      <a href="#" class="text-white text-decoration-none me-3">Projector Rentals Miami</a>
-      <a href="#" class="text-white text-decoration-none me-3">Blog</a>
-      <a href="contact.html" class="text-white text-decoration-none">Contact Us</a>
-    </div>
-  </div>
-
-  <!-- Navbar -->
+<div class="container-fluid sticky-top">
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark py-2">
-      <a class="navbar-brand" href="#">
-        <img src="img/1-01.png" alt="Logo" height="35">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="service.html">Service</a>
-          <a class="nav-link" href="team.html">Portfolio</a>
-          <a class="nav-link" href="contact.html">Contact Us</a>
-        </div>
-        <div class="d-none d-lg-flex">
-          <a class="btn btn-sm-square btn-light text-primary ms-2" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-sm-square btn-light text-primary ms-2" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-sm-square btn-light text-primary ms-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-sm-square btn-light text-primary ms-2" href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-    </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white py-lg-0 px-lg-3  rounded-navbar">
+          <div class="col align-self-start fw-bold fst-italic col-2">
+              <a class="navbar-brand " href="#" >
+              
+              <img src="img/1-01.png" alt="" height= "35"   class="d-inline-block pt-2 align-text-top">
+              
+          
+              </a>
+              
+          </div>
+          <div href="index.html" class="d-lg-none">
+              <div>
+                  <small class="me-1"><i class="fa fa-truck"></i>Free Delivery Free Set up</small>
+                  <br>
+                  <small class="me-1"><i class="fa fa-phone-alt me-1"></i>+1 (305) 386-7696</small>
+              </div>
+          <!-- <h1 class="text-primary m-0">Buel<span class="text-dark">Heald</span></h1>-->
+          </div>
+          <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav">
+                  <a href="index.html" class="nav-item nav-link active">Home</a>
+                  <a href="about.html" class="nav-item nav-link">About</a>
+                  <a href="service.html" class="nav-item nav-link">Service</a>
+                  <a href="team.html" class="nav-item nav-link">Portfolio</a>
+                  <div class="nav-item dropdown">
+                      
+                      <!-- <a href="404.html" class="dropdown-item">404 Page</a>-->
+                      </div>
+                  </div>
+                  <a href="contact.html" class="nav-item nav-link">Contac Us</a>
+              </div>
+              <div class="ms-auto d-none d-lg-flex">
+                  <a class="btn btn-sm-square btn-secondary ms-2" href=""><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-sm-square btn-secondary ms-2" href=""><i class="fab fa-twitter"></i></a>
+                  <a class="btn btn-sm-square btn-secondary ms-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                  <a class="btn btn-sm-square btn-secondary ms-2" href=""><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+      </nav>
   </div>
 </div>
+<!-- Navbar End -->
 
 <!-- Navbar End -->
 <!-- Carousel Start -->
@@ -339,7 +208,7 @@
 
                 <picture>
                 <!-- Móvil -->
-                <source media="(max-width: 400px)" srcset="img/2.jpg">
+                <source media="(max-width: 400px)" srcset="img/carousel-1.jpeg">
                 <!-- Tablet -->
                 <source media="(max-width: 992px)" srcset="img/carousel-1.jpeg">
                 <!-- Desktop (fallback) -->
@@ -375,7 +244,31 @@
                     </div>
                 </div>
             </div>
+<!-- ========= IMAGEN 3 (Texto centrado) ========= -->
+<div class="carousel-item">
+    <picture>
+        <!-- Móvil -->
+        <source media="(max-width: 400px)" srcset="img/team-4.jpg">
+        <!-- Tablet -->
+        <source media="(max-width: 992px)" srcset="img/team-4.jpg">
+        <!-- Desktop (fallback) -->
+        <img class="d-block w-100"
+        src="img/team-4.jpg"
+            alt="ACD technician adjusting projector at event"
+            style="object-fit: cover; width: 100%; max-height: 700px;">
+    </picture>
 
+    <div class="carousel-caption">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1>High-Quality Projection & Sound for Unforgettable Experiences</h1>
+                    <p>Our team of professionals ensures every setup is smooth, seamless, and tailored to your event's unique needs, delivering a stunning audiovisual experience every time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
         <!-- Botones de control del carrusel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
