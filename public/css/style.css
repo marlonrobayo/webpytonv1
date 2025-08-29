@@ -270,7 +270,7 @@
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Mantenemos la imagen contenida, con espacios blancos */
+
   object-position: center center;
 }
 
