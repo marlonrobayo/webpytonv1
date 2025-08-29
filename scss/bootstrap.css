@@ -5682,6 +5682,11 @@ textarea.form-control-lg {
 .carousel-dark .carousel-caption {
   color: #000;
 }
+.carousel-item img {
+    height: 650px;       /* Ajusta este valor si quieres más o menos alto */
+    object-fit: cover;   /* Recorta sin deformar la imagen */
+}
+
 
 @keyframes spinner-border {
   to {
